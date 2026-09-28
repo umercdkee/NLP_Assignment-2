@@ -1,0 +1,79 @@
+\documentclass[sigconf]{acmart}
+
+\settopmatter{printacmref=false}
+\setcopyright{none}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{float}
+
+% --------------------------------------------------
+% Paper information
+% --------------------------------------------------
+
+\title{NLP Assignment 2 Report}
+
+\author{Muhammad Umer Siddiqui}
+\email{ms08702@st.habib.pk}
+\affiliation{%
+  \institution{Dhanani School of Science and Engineering, Habib University}
+  \city{Karachi}
+  \country{Pakistan}
+}
+
+\author{Abdullah Shaikh}
+\email{as09245@st.habib.pk}
+\affiliation{%
+  \institution{Dhanani School of Science and Engineering, Habib University}
+  \city{Karachi}
+  \country{Pakistan}
+}
+
+\author{Arqish Zaria}
+\email{az09714@st.habib.pk}
+\affiliation{%
+  \institution{Dhanani School of Science and Engineering, Habib University}
+  \city{Karachi}
+  \country{Pakistan}
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Classifier Performance}
+The Naive Bayes classifier was evaluated on a random test subset of 200 reviews (100 positive, 100 negative). The model achieved an overall accuracy of 82.0\% and an \textbf{F1-score of 0.816}. 
+
+The confusion matrix (Table~\ref{tab:confusion}) demonstrates that the classifier performs consistently across both classes. With a Precision of 0.833 and Recall of 0.800, the model is slightly more conservative in predicting the positive class, ensuring high confidence when it does, though missing a small fraction of actual positive reviews. Overall, the error distribution is well-balanced (20 false negatives vs. 16 false positives), indicating the model did not develop a heavy bias toward either classification despite being trained on a limited 1,000-review subset.
+
+\begin{table}[H]
+\caption{Confusion Matrix}
+\label{tab:confusion}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+ & \textbf{Predicted Positive} & \textbf{Predicted Negative} \\ \midrule
+\textbf{Actual Positive} & 80 & 20 \\
+\textbf{Actual Negative} & 16 & 84 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\section{Implementation Challenges}
+During the implementation and testing of the classifier, several standard Natural Language Processing challenges were encountered and addressed within the code:
+
+\begin{itemize}
+    \item \textbf{Floating-Point Underflow:} Multiplying many small probabilities for large text documents causes numerical underflow, yielding a final probability of zero. This was successfully mitigated by operating in the log space, utilizing \texttt{math.log()} and summing the log-probabilities of tokens instead of multiplying raw probabilities.
+    \item \textbf{Zero-Frequency Problem:} Words present in the test set that were unseen during training would result in a zero probability, completely nullifying the entire document's score. This was handled using Laplace smoothing (adding 1 to word counts) when calculating the positive and negative likelihoods.
+\end{itemize}
+
+\section{Ideas for Improvement}
+While the baseline unigram Bag-of-Words model performs well, the following modifications could significantly improve its predictive accuracy:
+
+\begin{itemize}
+    \item \textbf{Implementing N-grams:} Transitioning from unigrams to bigrams or trigrams would allow the model to capture local context and crucial semantic modifiers, specifically negations (e.g., distinguishing ``good'' from ``not good'').
+    \item \textbf{Advanced Preprocessing:} Incorporating lemmatization or stemming would group morphological variants of words together (e.g., ``running'', ``runs'', and ``ran'' to the root ``run''), thereby condensing the vocabulary space and reinforcing feature weights.
+    \item \textbf{TF-IDF Weighting:} Replacing raw frequency counts with Term Frequency-Inverse Document Frequency (TF-IDF) would penalize highly common terms that survived basic stop-word removal, allowing the model to focus strictly on discriminative, class-defining vocabulary.
+    \item \textbf{Full Dataset Utilization:} The current model was trained on a randomly sampled subset of 1,000 reviews. Training on the full \texttt{aclImdb} dataset (25,000 training reviews) would dramatically improve the classifier's vocabulary coverage and generalizability.
+\end{itemize}
+
+\end{document}
