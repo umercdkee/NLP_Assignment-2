@@ -1,1 +1,8 @@
+venv/
+*.npy
+__pycache__/
+*.pyc
+*.pyo
+.vscode/
+.DS_Store
 Q2/aclImdb/

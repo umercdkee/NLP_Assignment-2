@@ -1,0 +1,501 @@
+sentence,label
+word_29 word_296 word_265 word_92 word_299 word_32 word_70 word_71 word_268 word_112 word_287,1
+word_121 word_299 word_74 word_44 word_155,0
+word_271 word_15 word_232 word_93 word_193 word_48 word_24 word_80,1
+word_52 word_196 word_236 word_229 word_107 word_265 word_200 word_236 word_101 word_209 word_121 word_262 word_180 word_102 word_287,0
+word_287 word_144 word_118 word_175 word_153 word_69 word_142 word_191 word_72 word_166 word_193 word_232,1
+word_107 word_208 word_279 word_98 word_97 word_288 word_220 word_162 word_249 word_93,1
+word_221 word_61 word_234 word_91 word_257 word_188 word_33 word_175 word_80 word_49 word_109 word_111 word_1,1
+word_83 word_113 word_258 word_78 word_111 word_170 word_252 word_193 word_210 word_107 word_100,1
+word_141 word_268 word_258 word_267 word_82 word_60 word_163 word_279 word_150 word_205 word_21 word_28 word_0 word_72 word_166,0
+word_32 word_64 word_132 word_50 word_164 word_125 word_53 word_25 word_42 word_144 word_279 word_67 word_274 word_30 word_139,0
+word_98 word_155 word_88 word_178 word_265,0
+word_270 word_281 word_93 word_243 word_284 word_140 word_230 word_293 word_157,0
+word_216 word_200 word_188 word_190 word_83 word_153 word_26 word_187 word_139 word_121 word_116 word_119,1
+word_184 word_262 word_164 word_131 word_9 word_291 word_248 word_208 word_101 word_51 word_107 word_10 word_19,1
+word_87 word_180 word_146 word_259 word_28 word_41 word_18 word_6 word_180 word_277 word_153,1
+word_152 word_292 word_260 word_70 word_31 word_157 word_129 word_54 word_219 word_51,1
+word_7 word_216 word_49 word_114 word_257 word_233 word_103 word_23 word_79 word_143 word_84 word_86 word_192,0
+word_253 word_86 word_215 word_100 word_242 word_35 word_29,1
+word_35 word_132 word_60 word_142 word_274 word_276 word_189 word_90 word_48 word_42 word_135 word_13 word_197,0
+word_81 word_214 word_32 word_43 word_34 word_190,0
+word_51 word_61 word_191 word_85 word_43 word_187 word_157 word_174,0
+word_265 word_184 word_200 word_260 word_141 word_244 word_150 word_95 word_15 word_15 word_252 word_91,1
+word_253 word_232 word_71 word_73 word_5 word_126 word_24 word_238 word_158 word_111,0
+word_103 word_65 word_260 word_131 word_158 word_177 word_215 word_173 word_30 word_127 word_152 word_99,0
+word_192 word_257 word_14 word_66 word_261 word_249 word_183 word_4 word_51 word_173 word_175 word_86 word_219 word_253 word_275,0
+word_180 word_8 word_208 word_54 word_109 word_153 word_159 word_281 word_225 word_125 word_91 word_38 word_8 word_239 word_87,0
+word_227 word_249 word_44 word_205 word_107 word_298,1
+word_67 word_129 word_298 word_116 word_204 word_231 word_264 word_169 word_116 word_244 word_24 word_18,0
+word_183 word_173 word_68 word_8 word_71 word_101 word_67,0
+word_175 word_150 word_10 word_133 word_9 word_53 word_235 word_187 word_171 word_298 word_195 word_130,1
+word_206 word_104 word_232 word_124 word_231 word_108 word_117 word_30 word_200,1
+word_155 word_140 word_230 word_184 word_236 word_9 word_281,1
+word_278 word_199 word_46 word_139 word_36 word_207 word_92 word_274 word_282 word_283 word_208 word_90 word_135 word_297,0
+word_96 word_239 word_267 word_288 word_289,1
+word_94 word_13 word_2 word_189 word_153 word_1 word_139 word_8 word_142 word_257,0
+word_291 word_109 word_200 word_2 word_90 word_233 word_255 word_132,0
+word_67 word_272 word_21 word_61 word_286,0
+word_271 word_140 word_279 word_1 word_24 word_21 word_71 word_49,1
+word_237 word_179 word_89 word_28 word_175 word_66 word_19 word_44 word_90 word_131 word_118 word_153 word_156 word_97 word_259,0
+word_191 word_243 word_127 word_87 word_170 word_115,1
+word_230 word_117 word_218 word_147 word_151 word_253 word_222 word_119 word_152,1
+word_177 word_265 word_60 word_122 word_60 word_102 word_165 word_140,1
+word_191 word_225 word_72 word_283 word_150 word_214 word_237 word_176 word_100 word_85 word_33 word_42,1
+word_257 word_146 word_238 word_227 word_197 word_24 word_151 word_79 word_216 word_83 word_96 word_36 word_178 word_143,0
+word_13 word_55 word_223 word_225 word_147 word_167 word_83 word_253 word_131 word_36 word_99 word_55 word_262,1
+word_154 word_249 word_43 word_50 word_234 word_153 word_235 word_95 word_1,1
+word_38 word_5 word_126 word_29 word_198 word_143 word_247 word_110 word_252 word_156 word_158 word_291 word_8 word_177 word_187,1
+word_79 word_271 word_122 word_19 word_35,1
+word_263 word_38 word_289 word_220 word_181 word_66 word_119 word_186 word_240 word_195 word_227 word_59,1
+word_115 word_78 word_171 word_134 word_5 word_181 word_33 word_91 word_28 word_206 word_34 word_113 word_78,1
+word_18 word_18 word_270 word_203 word_43,0
+word_138 word_246 word_247 word_41 word_202 word_127 word_256 word_224 word_287 word_258 word_7,1
+word_166 word_126 word_226 word_195 word_256 word_102,1
+word_135 word_59 word_67 word_147 word_211 word_298 word_79 word_106,0
+word_225 word_99 word_222 word_278 word_73,0
+word_249 word_147 word_39 word_39 word_135 word_0 word_70 word_114 word_24 word_243 word_276 word_251 word_106 word_285 word_101,0
+word_229 word_286 word_299 word_183 word_60 word_191 word_77 word_27 word_112 word_100 word_294 word_63 word_99 word_10,0
+word_38 word_132 word_76 word_190 word_126 word_254 word_289 word_21 word_297 word_264 word_186 word_118 word_83,1
+word_204 word_93 word_220 word_63 word_287 word_259 word_135 word_91 word_63 word_250 word_218 word_171 word_118 word_207,1
+word_191 word_37 word_95 word_84 word_273 word_281 word_243 word_1,1
+word_180 word_219 word_142 word_47 word_264 word_32 word_148,1
+word_24 word_250 word_188 word_132 word_206 word_143,0
+word_288 word_6 word_259 word_128 word_122 word_223 word_142 word_179 word_90 word_141 word_96 word_149 word_250 word_73,1
+word_229 word_185 word_25 word_234 word_5 word_103 word_64 word_92,0
+word_46 word_53 word_32 word_263 word_83 word_101 word_139 word_238 word_209 word_123 word_271 word_41 word_125 word_92 word_245,0
+word_134 word_220 word_101 word_216 word_53 word_234 word_187 word_2 word_88,1
+word_7 word_234 word_248 word_97 word_277,1
+word_205 word_160 word_2 word_71 word_74 word_198 word_265 word_42 word_136 word_116 word_187,0
+word_270 word_92 word_82 word_96 word_81 word_131 word_17 word_276 word_118 word_91 word_232 word_203 word_282,0
+word_250 word_113 word_179 word_267 word_65 word_137 word_172 word_109 word_241,1
+word_123 word_149 word_142 word_129 word_89 word_203 word_103 word_162,0
+word_88 word_86 word_27 word_171 word_239 word_42 word_294 word_292 word_209 word_217 word_146 word_242 word_202,1
+word_150 word_29 word_293 word_272 word_95 word_162 word_291 word_69 word_175 word_293 word_156 word_165 word_212 word_269 word_215,1
+word_127 word_15 word_187 word_154 word_15 word_15 word_124 word_22 word_98,0
+word_92 word_66 word_275 word_235 word_156 word_46 word_268 word_250 word_103 word_98 word_252 word_140,1
+word_282 word_56 word_246 word_75 word_210 word_291 word_55 word_225,0
+word_232 word_150 word_82 word_212 word_190 word_219 word_185 word_203 word_7,0
+word_93 word_274 word_18 word_170 word_125 word_7 word_6 word_77 word_58 word_18 word_145,0
+word_140 word_229 word_254 word_156 word_243 word_235 word_137 word_161 word_54 word_108 word_48 word_50 word_28,0
+word_254 word_3 word_258 word_188 word_250 word_96 word_28 word_69 word_133 word_225 word_237 word_281,0
+word_54 word_130 word_128 word_266 word_0 word_288 word_110 word_86 word_245 word_196 word_163 word_235 word_34,0
+word_15 word_3 word_109 word_41 word_206 word_256 word_111 word_108 word_244 word_162 word_230 word_182,1
+word_109 word_266 word_217 word_294 word_57 word_106 word_90,0
+word_122 word_17 word_205 word_61 word_21 word_138 word_234 word_227 word_11 word_92 word_247 word_212 word_207 word_248,1
+word_95 word_147 word_117 word_74 word_102 word_3 word_274 word_85 word_89 word_239 word_152 word_162 word_121 word_258 word_194,0
+word_255 word_139 word_218 word_120 word_294 word_116 word_114 word_138,0
+word_173 word_183 word_267 word_208 word_227 word_217,1
+word_209 word_128 word_231 word_113 word_200,0
+word_297 word_71 word_141 word_201 word_98 word_207 word_105 word_100 word_236 word_196 word_218,0
+word_104 word_195 word_90 word_62 word_204 word_28 word_17 word_127,0
+word_45 word_227 word_75 word_93 word_63,0
+word_250 word_86 word_251 word_187 word_79 word_228 word_188,0
+word_271 word_213 word_109 word_51 word_21 word_161 word_215,0
+word_39 word_162 word_13 word_212 word_41 word_235 word_34 word_136 word_291 word_10 word_115 word_102,1
+word_275 word_286 word_270 word_98 word_149 word_204 word_15 word_114 word_53,0
+word_0 word_102 word_277 word_61 word_63,1
+word_95 word_264 word_274 word_117 word_191 word_153 word_115 word_262 word_71 word_209 word_30 word_197,1
+word_157 word_46 word_53 word_192 word_24 word_274 word_256 word_68,0
+word_62 word_256 word_36 word_242 word_84 word_178 word_236 word_211 word_208 word_222,0
+word_31 word_233 word_6 word_146 word_162 word_69 word_117 word_23 word_295 word_227 word_127 word_26 word_108 word_184 word_256,1
+word_277 word_161 word_74 word_284 word_87 word_57 word_194,0
+word_124 word_122 word_299 word_177 word_248 word_91,1
+word_132 word_116 word_122 word_144 word_286 word_75 word_295 word_162 word_90 word_121 word_199 word_139 word_175 word_62 word_200,0
+word_297 word_31 word_105 word_179 word_174 word_56 word_176 word_114 word_32 word_120 word_192 word_38 word_281,1
+word_40 word_203 word_74 word_178 word_142 word_211 word_70 word_250 word_17 word_62,0
+word_257 word_75 word_8 word_106 word_69 word_138 word_179 word_160 word_279 word_295 word_130 word_298,0
+word_11 word_249 word_101 word_67 word_239 word_290 word_14 word_27 word_140 word_11 word_139 word_214 word_117 word_164 word_146,1
+word_125 word_216 word_231 word_4 word_153 word_55 word_38 word_30 word_251 word_177 word_8 word_187,1
+word_122 word_227 word_240 word_227 word_48 word_6 word_194,1
+word_104 word_52 word_180 word_65 word_218 word_228 word_58,0
+word_277 word_262 word_73 word_280 word_210 word_39 word_239 word_248 word_25 word_213 word_252 word_250 word_17,1
+word_117 word_68 word_24 word_103 word_172 word_86 word_92,0
+word_64 word_298 word_117 word_143 word_141 word_114 word_105 word_75 word_7 word_169,0
+word_134 word_288 word_23 word_53 word_101 word_118 word_32 word_198 word_46,0
+word_249 word_99 word_259 word_147 word_236 word_121,1
+word_185 word_286 word_18 word_129 word_277 word_39 word_22 word_97 word_3 word_1 word_214,1
+word_48 word_111 word_213 word_6 word_70 word_188,0
+word_16 word_91 word_65 word_283 word_94 word_60 word_164 word_54 word_40 word_256,0
+word_256 word_27 word_210 word_19 word_197 word_265 word_181 word_64 word_131 word_23 word_121,1
+word_255 word_289 word_139 word_22 word_65 word_130,1
+word_86 word_48 word_227 word_125 word_17 word_205 word_281 word_44 word_145 word_77 word_173 word_50 word_152 word_190,0
+word_98 word_157 word_136 word_272 word_113 word_31 word_173 word_8 word_25,0
+word_258 word_234 word_106 word_221 word_158 word_49 word_190 word_67 word_192 word_224 word_204,0
+word_243 word_57 word_21 word_120 word_63 word_159 word_60 word_177 word_262 word_128 word_246,1
+word_27 word_58 word_85 word_170 word_296 word_2 word_293 word_250 word_103 word_278 word_98 word_229 word_17 word_239 word_66,0
+word_110 word_74 word_195 word_277 word_191,1
+word_89 word_269 word_270 word_231 word_181 word_67 word_292,1
+word_248 word_68 word_283 word_0 word_169 word_137 word_19 word_143 word_236 word_20 word_139 word_22 word_27 word_236,1
+word_263 word_113 word_109 word_283 word_45,1
+word_51 word_235 word_235 word_229 word_167 word_233 word_181 word_202,1
+word_208 word_128 word_160 word_15 word_285 word_42 word_53,0
+word_113 word_268 word_89 word_287 word_177 word_3 word_31 word_35 word_159,1
+word_106 word_249 word_147 word_242 word_3 word_221 word_285 word_283 word_3 word_144 word_5 word_48,1
+word_76 word_55 word_7 word_176 word_299 word_132,1
+word_76 word_260 word_146 word_146 word_74 word_63 word_215 word_40,1
+word_197 word_223 word_285 word_285 word_218 word_183 word_110 word_23 word_197 word_255 word_97 word_130 word_256 word_296,1
+word_103 word_73 word_170 word_8 word_195 word_0 word_182 word_168 word_293 word_53 word_159 word_57 word_229,1
+word_198 word_10 word_151 word_184 word_212 word_29 word_253 word_275,0
+word_84 word_68 word_120 word_87 word_152 word_150 word_38 word_85 word_72,1
+word_19 word_206 word_48 word_17 word_72,0
+word_294 word_252 word_277 word_5 word_114 word_90 word_298 word_69 word_104 word_269 word_54 word_258 word_246 word_67 word_11,1
+word_229 word_165 word_212 word_86 word_77 word_178 word_148,0
+word_39 word_279 word_295 word_230 word_211 word_224 word_179,0
+word_2 word_219 word_104 word_83 word_84 word_202 word_166 word_126 word_225 word_156 word_96 word_234 word_118,0
+word_73 word_5 word_236 word_179 word_53 word_21 word_252 word_139 word_66 word_248 word_229,1
+word_217 word_232 word_209 word_174 word_48,1
+word_292 word_66 word_5 word_192 word_248 word_36 word_15 word_119,0
+word_235 word_64 word_286 word_256 word_189 word_15 word_243 word_97 word_244 word_183 word_223,1
+word_96 word_116 word_228 word_124 word_111 word_154 word_297 word_84 word_161 word_290,0
+word_72 word_199 word_109 word_51 word_254 word_253,1
+word_185 word_216 word_45 word_88 word_157 word_98 word_204 word_215,1
+word_90 word_165 word_213 word_266 word_5 word_299 word_206 word_256 word_231 word_269 word_219 word_113 word_244,0
+word_249 word_61 word_39 word_5 word_1 word_297 word_115 word_199,0
+word_51 word_288 word_33 word_215 word_28 word_131 word_82 word_131 word_277 word_210,0
+word_241 word_181 word_182 word_82 word_158 word_215 word_288,0
+word_127 word_100 word_129 word_70 word_232 word_89 word_179 word_148 word_69 word_73 word_105 word_282 word_46 word_223 word_105,0
+word_172 word_13 word_199 word_103 word_117 word_78 word_70 word_41 word_232 word_150,1
+word_35 word_23 word_218 word_155 word_79 word_62 word_88,1
+word_69 word_285 word_163 word_74 word_294 word_78 word_185 word_19 word_95 word_170 word_85 word_52 word_297 word_68,0
+word_176 word_8 word_160 word_158 word_137 word_117,0
+word_209 word_222 word_140 word_245 word_245 word_61 word_55 word_0 word_57 word_116 word_208 word_238 word_7 word_277 word_252,0
+word_287 word_139 word_52 word_133 word_144 word_220 word_106 word_234 word_48 word_291 word_76 word_56 word_181 word_36,1
+word_190 word_247 word_262 word_211 word_157 word_52 word_77 word_171 word_123 word_102 word_199 word_134,1
+word_18 word_161 word_94 word_136 word_276 word_48 word_167 word_108,0
+word_150 word_212 word_35 word_217 word_227 word_245 word_131 word_284 word_262 word_296 word_52 word_58,0
+word_142 word_168 word_168 word_109 word_164 word_65 word_259 word_139,1
+word_250 word_83 word_293 word_193 word_139 word_74 word_240,1
+word_56 word_10 word_296 word_96 word_175 word_54 word_200 word_257 word_88 word_24 word_117 word_239 word_234 word_139,1
+word_25 word_95 word_73 word_128 word_11 word_90 word_245 word_19 word_89 word_53 word_44 word_173 word_165 word_6,1
+word_215 word_141 word_205 word_136 word_252 word_80 word_204 word_144 word_233 word_14 word_228 word_183 word_274 word_235,0
+word_9 word_287 word_144 word_191 word_176 word_179 word_176 word_40 word_234 word_260 word_298 word_43 word_11 word_140,0
+word_197 word_116 word_249 word_292 word_31 word_208 word_214 word_121 word_284 word_271 word_275 word_129,1
+word_299 word_176 word_76 word_156 word_79 word_175 word_188 word_114 word_277,1
+word_111 word_101 word_123 word_171 word_158 word_144 word_203 word_153,0
+word_162 word_16 word_206 word_13 word_163 word_164 word_173 word_159 word_155 word_218,1
+word_277 word_61 word_38 word_214 word_287 word_51 word_205 word_228 word_58 word_290 word_218 word_292,0
+word_161 word_189 word_27 word_126 word_39 word_174 word_94 word_76 word_55 word_185 word_152 word_94 word_201 word_174 word_101,0
+word_286 word_106 word_197 word_68 word_298 word_256 word_123 word_235 word_85,0
+word_75 word_266 word_265 word_136 word_180 word_245 word_5 word_168,0
+word_44 word_22 word_289 word_173 word_2 word_105 word_161 word_125 word_273 word_237 word_197 word_255,0
+word_25 word_246 word_150 word_17 word_70 word_211 word_87 word_140 word_179 word_54 word_181 word_239,0
+word_1 word_92 word_129 word_161 word_87 word_50 word_169 word_251 word_51 word_84 word_82 word_56 word_131 word_182 word_116,1
+word_154 word_272 word_52 word_289 word_194 word_4 word_56 word_260 word_73 word_228 word_101 word_27 word_9,0
+word_206 word_186 word_190 word_288 word_69 word_108 word_83 word_169,1
+word_114 word_210 word_144 word_211 word_147 word_70 word_90 word_125,0
+word_292 word_262 word_128 word_203 word_32 word_280 word_156 word_213,0
+word_59 word_180 word_205 word_219 word_10 word_79 word_44 word_292,0
+word_6 word_231 word_157 word_134 word_162 word_244 word_185 word_180,1
+word_36 word_13 word_299 word_170 word_185 word_7 word_255 word_191 word_165,0
+word_47 word_52 word_181 word_170 word_127 word_250 word_138,0
+word_12 word_291 word_235 word_65 word_224 word_207 word_185 word_80,1
+word_255 word_107 word_93 word_103 word_204 word_171 word_27 word_107 word_287 word_96 word_175 word_214 word_183,1
+word_113 word_259 word_250 word_31 word_237 word_209 word_268 word_186 word_79 word_80 word_132 word_143 word_183 word_226,0
+word_273 word_20 word_51 word_252 word_47 word_269,1
+word_209 word_51 word_127 word_130 word_58 word_202 word_197 word_247 word_249 word_231 word_64 word_175,1
+word_160 word_213 word_30 word_204 word_50 word_107,1
+word_258 word_228 word_8 word_16 word_89 word_170 word_202 word_273 word_153 word_292 word_195 word_99 word_193 word_61 word_175,1
+word_109 word_24 word_184 word_89 word_15 word_52 word_5 word_173 word_224 word_170 word_229 word_178 word_281 word_153,1
+word_29 word_36 word_269 word_136 word_92 word_4 word_97 word_56 word_242 word_49,1
+word_99 word_171 word_206 word_203 word_28 word_45 word_267 word_108 word_29 word_43 word_60,1
+word_53 word_195 word_278 word_233 word_160 word_42 word_33 word_59 word_137 word_6 word_17,0
+word_253 word_167 word_194 word_163 word_165 word_88 word_91 word_87 word_235 word_245 word_104 word_83 word_184,1
+word_258 word_233 word_14 word_107 word_3 word_24 word_10 word_92 word_135 word_290 word_75,1
+word_172 word_95 word_21 word_76 word_49 word_238,0
+word_74 word_146 word_219 word_190 word_145 word_98 word_159 word_292,0
+word_195 word_183 word_11 word_36 word_68 word_234,0
+word_289 word_82 word_6 word_281 word_12,0
+word_267 word_90 word_281 word_43 word_261 word_11 word_109 word_158 word_275 word_166 word_125 word_218,1
+word_227 word_174 word_122 word_153 word_73 word_229 word_257 word_227 word_153 word_180 word_35 word_83,1
+word_195 word_10 word_165 word_294 word_170 word_58,1
+word_94 word_244 word_260 word_102 word_17 word_158 word_62 word_130,1
+word_41 word_22 word_152 word_129 word_166 word_298 word_115 word_174 word_197 word_125 word_130 word_278 word_240 word_188 word_204,0
+word_244 word_250 word_8 word_293 word_35 word_145 word_178,1
+word_21 word_246 word_17 word_188 word_286 word_209 word_294 word_25,1
+word_129 word_49 word_224 word_95 word_157 word_211 word_127 word_95 word_109 word_130 word_183 word_66 word_99 word_270,1
+word_33 word_242 word_2 word_70 word_278 word_140 word_124 word_22 word_3 word_265 word_269 word_103 word_209,0
+word_213 word_60 word_70 word_174 word_117 word_184 word_38 word_190 word_88 word_35 word_291,1
+word_168 word_99 word_259 word_82 word_55 word_78 word_281 word_29 word_197,0
+word_173 word_253 word_237 word_106 word_147 word_105 word_152 word_220 word_288,1
+word_277 word_30 word_186 word_113 word_62 word_282 word_126 word_69 word_200 word_133 word_207,0
+word_260 word_238 word_277 word_239 word_141 word_178 word_26 word_220 word_194 word_263 word_103,0
+word_122 word_299 word_96 word_218 word_213,1
+word_144 word_238 word_296 word_43 word_3 word_202 word_90 word_20 word_137 word_97 word_127 word_19 word_257 word_162 word_184,0
+word_192 word_174 word_214 word_194 word_205 word_10 word_22 word_76 word_243 word_284 word_113,0
+word_230 word_53 word_217 word_60 word_111 word_42 word_169,0
+word_266 word_187 word_215 word_289 word_139 word_79 word_230 word_26 word_65 word_173 word_291 word_229 word_59 word_35 word_51,0
+word_158 word_277 word_89 word_112 word_262 word_11,0
+word_54 word_184 word_24 word_17 word_6 word_79,1
+word_139 word_64 word_34 word_149 word_54 word_287 word_53 word_187,1
+word_67 word_5 word_51 word_126 word_288 word_112,0
+word_67 word_74 word_91 word_173 word_0 word_269 word_101,1
+word_76 word_201 word_204 word_195 word_238 word_94 word_51 word_33 word_147 word_212 word_53 word_22 word_229,0
+word_209 word_190 word_279 word_60 word_253 word_281 word_286 word_23,1
+word_20 word_259 word_173 word_134 word_93 word_180 word_256 word_74 word_142,0
+word_147 word_291 word_221 word_120 word_108 word_185 word_177 word_134 word_291 word_151 word_184,0
+word_175 word_51 word_159 word_240 word_172 word_29 word_123 word_288 word_119 word_43 word_171 word_214,0
+word_272 word_130 word_170 word_100 word_102 word_229 word_94 word_87 word_61,1
+word_78 word_86 word_205 word_148 word_275 word_27 word_192,1
+word_171 word_280 word_42 word_282 word_83 word_10 word_291 word_168 word_167 word_70 word_88 word_98 word_101 word_167,0
+word_113 word_127 word_66 word_247 word_263 word_28 word_196 word_231 word_108 word_290,1
+word_54 word_152 word_17 word_203 word_209 word_94 word_125 word_190 word_121 word_96 word_17 word_7 word_255 word_138 word_263,0
+word_210 word_270 word_42 word_108 word_156 word_91 word_175,1
+word_271 word_141 word_254 word_111 word_117 word_187 word_85 word_217 word_200 word_183 word_124 word_151 word_62 word_133 word_202,1
+word_2 word_273 word_293 word_255 word_154 word_269 word_256 word_116 word_88 word_32 word_150 word_45,1
+word_210 word_241 word_170 word_227 word_286 word_76 word_206 word_113 word_28 word_59 word_290 word_261 word_70,0
+word_9 word_103 word_215 word_291 word_12 word_30 word_153 word_32 word_191 word_215 word_48 word_218 word_250,0
+word_62 word_186 word_234 word_274 word_14 word_293 word_233,1
+word_221 word_255 word_198 word_129 word_232 word_38 word_84,1
+word_178 word_287 word_216 word_30 word_234 word_62 word_298 word_158 word_105 word_176 word_183 word_132,1
+word_191 word_69 word_265 word_53 word_233 word_244 word_298 word_96 word_107 word_90,1
+word_265 word_9 word_170 word_120 word_260 word_159,1
+word_249 word_82 word_51 word_69 word_148 word_258 word_206 word_19 word_0 word_198 word_187 word_227,0
+word_164 word_170 word_47 word_179 word_282 word_120 word_276 word_289 word_223 word_189 word_280,0
+word_194 word_277 word_267 word_248 word_230 word_71 word_259 word_247 word_186 word_140 word_209 word_211 word_115 word_253,0
+word_275 word_237 word_213 word_20 word_175 word_46 word_74 word_88 word_49 word_235 word_183 word_61 word_287,1
+word_99 word_237 word_215 word_112 word_132,0
+word_173 word_82 word_126 word_276 word_267 word_107 word_193 word_171 word_200 word_5 word_39,0
+word_42 word_92 word_50 word_145 word_179 word_78 word_20,1
+word_255 word_248 word_44 word_46 word_226 word_240 word_37 word_167 word_155 word_88 word_284 word_117 word_239 word_187 word_138,0
+word_148 word_86 word_45 word_283 word_151 word_156,1
+word_45 word_222 word_91 word_172 word_136 word_191 word_241 word_186 word_36 word_100 word_214 word_233 word_190 word_164 word_224,0
+word_45 word_230 word_28 word_82 word_24 word_260 word_253 word_69 word_135 word_96 word_126 word_202 word_7 word_232,0
+word_211 word_121 word_1 word_52 word_101 word_246 word_43 word_116 word_7 word_55 word_248 word_219 word_16 word_42 word_284,1
+word_257 word_78 word_170 word_164 word_154 word_30 word_292 word_270 word_110,1
+word_201 word_118 word_151 word_294 word_170 word_218 word_138 word_109 word_123 word_213 word_4 word_156 word_114 word_3,0
+word_64 word_91 word_146 word_213 word_34 word_279,1
+word_132 word_118 word_128 word_273 word_14 word_144,1
+word_249 word_127 word_81 word_209 word_239 word_195 word_91 word_32 word_262,0
+word_31 word_246 word_71 word_287 word_294 word_114 word_44 word_147 word_166 word_268 word_36 word_241 word_200,1
+word_190 word_73 word_90 word_142 word_40 word_20 word_252 word_188,0
+word_279 word_222 word_266 word_224 word_13 word_167 word_164 word_294 word_203 word_133,0
+word_220 word_252 word_193 word_108 word_251 word_34 word_276 word_49 word_133 word_183 word_117 word_284 word_114,0
+word_200 word_264 word_289 word_100 word_143,0
+word_207 word_211 word_47 word_193 word_187 word_272 word_299,0
+word_171 word_222 word_254 word_32 word_210,0
+word_139 word_246 word_206 word_45 word_203 word_17 word_260 word_276 word_48 word_259 word_196 word_135 word_12 word_88,1
+word_239 word_148 word_185 word_99 word_139 word_76,0
+word_278 word_202 word_152 word_153 word_296 word_297 word_260 word_126 word_97 word_264 word_42 word_3,1
+word_168 word_163 word_75 word_281 word_17 word_195 word_160 word_92 word_187,1
+word_145 word_243 word_15 word_264 word_80 word_78 word_182 word_256 word_55 word_75 word_288 word_289 word_288 word_104,0
+word_81 word_283 word_266 word_99 word_170 word_40 word_16 word_218,1
+word_19 word_136 word_167 word_280 word_179 word_95,1
+word_200 word_151 word_234 word_295 word_121 word_206 word_242,0
+word_14 word_39 word_137 word_88 word_92 word_244 word_131 word_184 word_60 word_143,0
+word_62 word_190 word_143 word_42 word_241 word_47 word_32 word_26,1
+word_17 word_109 word_74 word_298 word_175 word_292 word_87 word_208 word_225,0
+word_200 word_122 word_66 word_129 word_139 word_221 word_262 word_53 word_76 word_153 word_224 word_33 word_226,0
+word_114 word_200 word_259 word_34 word_250 word_138 word_233 word_74 word_90 word_80 word_289 word_75 word_204 word_276 word_130,1
+word_108 word_140 word_258 word_177 word_161 word_10 word_296 word_102 word_25 word_75 word_169 word_235,1
+word_288 word_166 word_260 word_163 word_92 word_290 word_147 word_125 word_73 word_205,0
+word_49 word_55 word_144 word_102 word_14 word_63 word_84 word_150 word_107 word_36 word_82 word_71 word_8,0
+word_168 word_34 word_144 word_223 word_34,1
+word_142 word_53 word_292 word_70 word_48 word_142 word_67 word_193 word_245 word_37 word_0,0
+word_163 word_56 word_205 word_178 word_258 word_199,1
+word_95 word_287 word_283 word_256 word_125,0
+word_239 word_2 word_155 word_96 word_249 word_272 word_239 word_296 word_208 word_281 word_106,0
+word_44 word_244 word_28 word_201 word_152 word_271 word_266 word_148 word_250 word_50 word_143 word_134 word_74,0
+word_266 word_6 word_155 word_102 word_155 word_17 word_263 word_240,0
+word_235 word_226 word_225 word_191 word_3 word_67,1
+word_60 word_285 word_82 word_117 word_58 word_214 word_219 word_124 word_250 word_14 word_17 word_207,1
+word_45 word_168 word_290 word_71 word_15 word_90 word_31 word_76 word_296 word_71 word_11 word_203 word_41 word_277 word_153,0
+word_195 word_212 word_298 word_194 word_266 word_262 word_177 word_205 word_167,0
+word_291 word_122 word_43 word_155 word_233 word_51,0
+word_291 word_222 word_130 word_220 word_286 word_157 word_87,1
+word_52 word_204 word_214 word_253 word_119 word_135 word_196,0
+word_219 word_169 word_223 word_64 word_273 word_122 word_224 word_90,0
+word_200 word_75 word_140 word_192 word_68 word_64 word_124 word_66 word_182 word_86 word_47 word_280 word_245,1
+word_61 word_190 word_145 word_47 word_287 word_294 word_115,1
+word_253 word_186 word_208 word_266 word_156 word_196 word_137 word_85 word_193 word_269,1
+word_274 word_250 word_224 word_268 word_81 word_70 word_117 word_186 word_49 word_114 word_296 word_281,1
+word_35 word_59 word_155 word_111 word_276 word_241 word_46 word_252 word_126 word_173 word_208 word_12 word_132,0
+word_293 word_20 word_196 word_161 word_167 word_73 word_295,1
+word_192 word_197 word_265 word_72 word_70 word_114 word_51,1
+word_99 word_47 word_126 word_35 word_229 word_38 word_79 word_52 word_251 word_202 word_69,1
+word_48 word_53 word_260 word_149 word_122 word_283 word_264 word_95 word_36 word_68 word_41 word_111 word_123,0
+word_1 word_98 word_117 word_238 word_252 word_98 word_246 word_260 word_23 word_201 word_297 word_199 word_296 word_140,0
+word_201 word_124 word_57 word_2 word_245 word_59 word_50 word_265 word_121 word_134 word_120 word_28,1
+word_241 word_12 word_35 word_180 word_260 word_243 word_42 word_105 word_177 word_161 word_125 word_293 word_166 word_75,0
+word_173 word_146 word_165 word_84 word_87,1
+word_69 word_247 word_149 word_150 word_255 word_178 word_167 word_25 word_299 word_128 word_31 word_209 word_283 word_48 word_279,0
+word_136 word_204 word_239 word_22 word_124 word_253 word_264 word_162 word_276 word_76 word_14 word_33 word_294 word_188,0
+word_273 word_233 word_66 word_186 word_103 word_211 word_36 word_76 word_285,0
+word_12 word_292 word_211 word_296 word_80 word_91 word_150 word_62 word_101 word_206 word_200 word_11 word_105 word_162 word_121,1
+word_208 word_243 word_237 word_95 word_158 word_102 word_283 word_237 word_262 word_69 word_208 word_126 word_181 word_48 word_226,0
+word_61 word_136 word_21 word_21 word_202 word_140 word_140 word_184 word_285 word_117 word_30 word_109 word_235,0
+word_210 word_23 word_90 word_77 word_58 word_197 word_186 word_32 word_55 word_88 word_261 word_228,0
+word_192 word_81 word_242 word_271 word_196 word_27 word_98 word_106 word_146 word_0 word_171 word_176 word_122,1
+word_79 word_138 word_68 word_141 word_265 word_140 word_144,0
+word_16 word_121 word_110 word_79 word_222 word_131 word_262 word_142 word_25,1
+word_115 word_169 word_139 word_0 word_258 word_157 word_109 word_198 word_4,0
+word_16 word_102 word_243 word_36 word_99 word_167 word_274 word_39 word_200 word_8 word_107 word_194 word_100,0
+word_220 word_59 word_239 word_275 word_234 word_93 word_70 word_53 word_65 word_27 word_151 word_176,1
+word_235 word_16 word_272 word_236 word_196 word_180 word_258 word_201 word_299 word_131 word_136 word_264 word_242 word_127,0
+word_221 word_277 word_182 word_12 word_20,1
+word_63 word_86 word_17 word_153 word_218 word_143 word_76 word_113 word_147 word_146 word_75,0
+word_80 word_261 word_239 word_115 word_202 word_43 word_53 word_229 word_222 word_32 word_233 word_284 word_122,1
+word_21 word_286 word_31 word_94 word_8 word_26 word_166,0
+word_203 word_105 word_284 word_110 word_143,0
+word_134 word_171 word_299 word_284 word_118 word_197 word_91 word_70 word_261 word_71 word_236,0
+word_272 word_117 word_70 word_117 word_0 word_131 word_95 word_174,0
+word_46 word_49 word_217 word_258 word_165 word_7 word_254 word_105 word_39 word_103 word_125 word_52 word_239 word_48,1
+word_37 word_8 word_9 word_247 word_128 word_144 word_249 word_33 word_124 word_161 word_257 word_221 word_294 word_271,0
+word_30 word_41 word_115 word_172 word_5 word_90 word_294 word_294 word_206,1
+word_285 word_179 word_232 word_53 word_163 word_207 word_230,1
+word_92 word_82 word_224 word_89 word_275 word_37 word_73 word_125 word_188 word_111 word_17,0
+word_283 word_160 word_284 word_93 word_137 word_67 word_180 word_214 word_31 word_244 word_231 word_38,0
+word_49 word_149 word_94 word_258 word_100 word_30,0
+word_148 word_126 word_40 word_209 word_125 word_216 word_165 word_247 word_104,0
+word_111 word_153 word_56 word_19 word_33 word_244 word_90 word_148 word_218,1
+word_126 word_188 word_272 word_223 word_125 word_220 word_285 word_256 word_232 word_3 word_206,1
+word_11 word_61 word_133 word_183 word_237 word_212 word_41 word_231 word_72 word_256 word_247 word_203,0
+word_242 word_261 word_282 word_118 word_65 word_58 word_190 word_268 word_117 word_22,1
+word_138 word_7 word_24 word_284 word_289 word_21 word_133 word_32 word_41 word_207 word_62 word_154,1
+word_113 word_228 word_238 word_43 word_92,1
+word_217 word_261 word_276 word_51 word_53 word_29 word_112 word_289 word_123 word_219 word_34 word_154 word_254,1
+word_66 word_167 word_266 word_35 word_268 word_262 word_263 word_153 word_210 word_47,1
+word_113 word_48 word_255 word_174 word_182 word_235 word_132 word_20 word_45 word_43 word_158 word_194 word_257 word_44,1
+word_14 word_146 word_238 word_42 word_142 word_95 word_184 word_11 word_210 word_176,1
+word_206 word_178 word_7 word_97 word_148 word_35 word_23 word_247,0
+word_142 word_155 word_89 word_259 word_28 word_8 word_264 word_291 word_126 word_5,0
+word_164 word_30 word_228 word_154 word_93 word_55 word_283 word_156 word_246 word_221 word_257 word_152 word_262,0
+word_78 word_174 word_85 word_25 word_238 word_149 word_29 word_214 word_258 word_275,0
+word_200 word_150 word_150 word_173 word_153,0
+word_147 word_82 word_100 word_120 word_84 word_67 word_73 word_142 word_275 word_236 word_53,0
+word_286 word_193 word_73 word_256 word_231 word_99 word_25,0
+word_264 word_181 word_105 word_111 word_200 word_291 word_204 word_282 word_168 word_194,0
+word_263 word_73 word_207 word_124 word_10 word_163 word_257 word_291,1
+word_31 word_84 word_32 word_60 word_292 word_25 word_200 word_76 word_272 word_256 word_163 word_253 word_71 word_66 word_145,1
+word_158 word_199 word_294 word_14 word_109 word_41 word_14 word_239 word_216 word_293 word_80 word_270,1
+word_292 word_262 word_219 word_226 word_136 word_72 word_9 word_188 word_18 word_277 word_31 word_152 word_53 word_120 word_168,0
+word_105 word_221 word_245 word_293 word_27 word_77 word_106 word_163 word_57 word_235 word_92 word_41 word_156,0
+word_153 word_3 word_243 word_212 word_98 word_273 word_249 word_185 word_37 word_200 word_18 word_258 word_41 word_273 word_252,1
+word_111 word_184 word_35 word_37 word_163 word_119 word_9 word_0 word_73,0
+word_44 word_279 word_70 word_114 word_91 word_99 word_88 word_105 word_33 word_261 word_265 word_50,1
+word_216 word_146 word_39 word_183 word_8 word_219 word_203 word_73 word_265,1
+word_108 word_3 word_247 word_68 word_58 word_275 word_219 word_253 word_251,0
+word_201 word_136 word_208 word_128 word_292,1
+word_180 word_124 word_209 word_233 word_290 word_53 word_11 word_144,1
+word_63 word_85 word_21 word_277 word_151 word_65 word_4 word_265 word_161 word_195 word_48 word_12,0
+word_28 word_37 word_182 word_158 word_156 word_18,0
+word_196 word_256 word_85 word_70 word_247 word_251 word_205 word_122 word_206 word_253 word_143 word_23,0
+word_34 word_123 word_162 word_195 word_87 word_23 word_146 word_182,1
+word_249 word_5 word_1 word_149 word_48,0
+word_223 word_187 word_67 word_237 word_199 word_9 word_89 word_72 word_171 word_30,0
+word_56 word_143 word_251 word_226 word_209 word_251 word_287 word_139 word_279,0
+word_226 word_78 word_92 word_23 word_16 word_168 word_174 word_94,0
+word_175 word_251 word_188 word_293 word_245 word_164 word_280 word_77 word_254 word_221,1
+word_70 word_7 word_35 word_8 word_140 word_230 word_24 word_88 word_204 word_84,0
+word_222 word_212 word_134 word_241 word_213 word_270 word_124 word_61 word_282 word_163 word_211 word_234 word_242 word_119,1
+word_110 word_214 word_118 word_203 word_26 word_177 word_50 word_80 word_16 word_108 word_9 word_36 word_163 word_24,1
+word_48 word_36 word_265 word_233 word_186 word_96 word_75 word_113 word_63,0
+word_21 word_190 word_130 word_38 word_56 word_1 word_69 word_287 word_87 word_242 word_94 word_55,0
+word_204 word_108 word_251 word_48 word_258 word_111 word_126 word_285 word_279 word_59 word_239 word_9 word_201,0
+word_280 word_268 word_95 word_5 word_69 word_84 word_231 word_292,1
+word_46 word_146 word_218 word_93 word_17 word_245 word_87 word_124 word_154,1
+word_149 word_35 word_203 word_219 word_239 word_279 word_128 word_21 word_24 word_244 word_104 word_289,1
+word_31 word_123 word_122 word_162 word_239 word_109 word_268 word_20 word_226 word_62 word_129 word_127 word_258 word_8,0
+word_219 word_30 word_112 word_49 word_184,1
+word_0 word_16 word_202 word_192 word_1,1
+word_230 word_20 word_165 word_226 word_285 word_275 word_189 word_118 word_138 word_251 word_208 word_180 word_38 word_32 word_145,0
+word_58 word_162 word_62 word_95 word_188 word_233,1
+word_249 word_133 word_208 word_119 word_107 word_107 word_109 word_252 word_75 word_116 word_213 word_7 word_80 word_109 word_40,0
+word_72 word_227 word_297 word_214 word_246 word_142 word_264 word_222 word_264 word_17,1
+word_116 word_97 word_135 word_77 word_10 word_295 word_20 word_174 word_290 word_274,0
+word_184 word_180 word_232 word_61 word_274 word_39 word_290,1
+word_29 word_244 word_75 word_262 word_250 word_48 word_130,1
+word_274 word_226 word_54 word_94 word_30 word_59 word_16 word_299 word_195 word_203,0
+word_279 word_273 word_138 word_214 word_7 word_260 word_43 word_199 word_295,1
+word_151 word_212 word_42 word_19 word_72 word_299 word_184 word_129 word_101 word_263,1
+word_211 word_252 word_152 word_42 word_236 word_191 word_87 word_158 word_118,0
+word_247 word_193 word_99 word_253 word_116 word_44 word_50 word_217 word_115 word_110 word_101 word_149 word_78,0
+word_221 word_249 word_108 word_210 word_231 word_179 word_82 word_290 word_190 word_66 word_183,0
+word_90 word_27 word_164 word_32 word_181 word_71 word_19 word_135 word_108 word_164 word_190,0
+word_271 word_214 word_287 word_64 word_71 word_207 word_140 word_83 word_71 word_80 word_241,1
+word_171 word_278 word_215 word_272 word_259 word_49 word_76 word_167,1
+word_231 word_175 word_22 word_179 word_84 word_27 word_281 word_244 word_183 word_19 word_99 word_107 word_170 word_289 word_27,1
+word_266 word_229 word_159 word_233 word_38 word_75 word_152 word_95 word_5 word_287 word_238 word_208 word_33,1
+word_30 word_147 word_192 word_46 word_135 word_256 word_134 word_231 word_147 word_213 word_262 word_195 word_267 word_29 word_86,1
+word_138 word_189 word_71 word_179 word_102 word_6 word_259 word_187,1
+word_285 word_288 word_241 word_119 word_235 word_108 word_277 word_162 word_190 word_279 word_173 word_276,1
+word_94 word_226 word_225 word_128 word_118 word_284 word_216 word_236 word_174 word_280,1
+word_168 word_48 word_120 word_38 word_92 word_49 word_220 word_271 word_122 word_49 word_19 word_140 word_276 word_114,0
+word_194 word_148 word_75 word_275 word_174 word_87 word_223 word_242 word_77 word_181 word_249 word_212 word_294 word_132,1
+word_108 word_83 word_249 word_127 word_252 word_129 word_167 word_20 word_251 word_222 word_258 word_287,0
+word_194 word_8 word_54 word_228 word_155 word_121 word_197 word_216 word_43 word_287,1
+word_266 word_262 word_281 word_148 word_225 word_85 word_226 word_291 word_128 word_5 word_26 word_297 word_184 word_4 word_254,0
+word_167 word_171 word_148 word_53 word_34 word_59 word_35 word_203 word_203 word_182 word_70 word_104 word_295 word_29 word_101,1
+word_150 word_259 word_284 word_73 word_77 word_3 word_203 word_208 word_27 word_253 word_81 word_251 word_203 word_152 word_193,1
+word_82 word_94 word_255 word_81 word_187 word_103 word_283 word_26 word_25,1
+word_234 word_172 word_263 word_161 word_203 word_1 word_219 word_47 word_210 word_186 word_232,1
+word_55 word_272 word_216 word_215 word_2 word_263 word_173 word_235,0
+word_85 word_286 word_265 word_133 word_236,1
+word_290 word_227 word_2 word_172 word_46 word_221 word_35,1
+word_237 word_231 word_236 word_46 word_265 word_219 word_263 word_149,0
+word_122 word_222 word_292 word_61 word_255 word_254 word_168 word_156 word_272 word_156 word_190 word_56 word_165,1
+word_258 word_41 word_79 word_292 word_78 word_225 word_208 word_178 word_239 word_27 word_5,1
+word_10 word_98 word_48 word_182 word_282 word_266 word_73,1
+word_288 word_68 word_262 word_113 word_292,1
+word_22 word_282 word_87 word_84 word_96 word_200 word_181 word_28 word_129 word_13 word_262,1
+word_216 word_271 word_0 word_30 word_72 word_38,0
+word_255 word_223 word_69 word_202 word_196 word_145 word_38 word_183 word_101 word_295 word_39 word_136 word_97,1
+word_275 word_19 word_0 word_211 word_180 word_239,1
+word_211 word_228 word_168 word_84 word_194 word_297,0
+word_295 word_164 word_5 word_286 word_18 word_295 word_85 word_52 word_120 word_8 word_155 word_182 word_7 word_36 word_232,0
+word_213 word_109 word_232 word_184 word_29,1
+word_182 word_279 word_132 word_157 word_116 word_206 word_239 word_110 word_107 word_281 word_10 word_62 word_63 word_228,1
+word_68 word_245 word_53 word_215 word_52 word_8 word_46 word_8,1
+word_238 word_19 word_207 word_260 word_9 word_184 word_30 word_99 word_14 word_149 word_153 word_166,0
+word_47 word_78 word_274 word_61 word_121 word_154 word_173 word_268 word_190 word_92 word_236 word_253 word_43 word_153,1
+word_11 word_288 word_147 word_190 word_8 word_43 word_149 word_63 word_151 word_103 word_97 word_272 word_138 word_139 word_155,1
+word_169 word_200 word_81 word_186 word_275 word_18 word_93 word_85 word_167 word_294 word_141,0
+word_161 word_50 word_84 word_95 word_241 word_54 word_154 word_122,0
+word_170 word_135 word_166 word_74 word_246 word_99 word_261 word_85,0
+word_137 word_192 word_135 word_157 word_281 word_237 word_199 word_188 word_225 word_287 word_40,0
+word_90 word_253 word_248 word_36 word_118 word_65 word_142 word_119,1
+word_82 word_250 word_191 word_149 word_235 word_71 word_232 word_246,0
+word_146 word_282 word_80 word_24 word_174,0
+word_224 word_294 word_196 word_127 word_266 word_134 word_29 word_103 word_0,1
+word_180 word_272 word_12 word_92 word_22 word_59 word_19 word_253 word_192 word_137 word_146 word_84 word_289,1
+word_149 word_158 word_173 word_113 word_138,0
+word_151 word_206 word_189 word_0 word_148 word_34 word_293 word_219 word_113 word_136,1
+word_96 word_169 word_117 word_144 word_262 word_164,1
+word_209 word_184 word_185 word_259 word_122 word_279 word_44 word_17 word_35,1
+word_212 word_49 word_197 word_117 word_220 word_69 word_41 word_176 word_27 word_19 word_97 word_261 word_196 word_268,1
+word_136 word_219 word_80 word_200 word_124 word_179,0
+word_193 word_21 word_161 word_179 word_159 word_45 word_264,1
+word_36 word_118 word_198 word_22 word_203 word_146 word_8,1
+word_178 word_268 word_165 word_223 word_218 word_27 word_105 word_253 word_95 word_198 word_224,1
+word_117 word_30 word_208 word_254 word_7 word_87 word_159 word_150 word_23 word_77 word_221 word_85 word_143,0
+word_116 word_56 word_55 word_145 word_59 word_79 word_47 word_79 word_291 word_258 word_287 word_292 word_5 word_219 word_149,0
+word_239 word_273 word_244 word_142 word_143 word_289 word_239 word_112 word_218,1
+word_205 word_53 word_102 word_145 word_26 word_49 word_85 word_74 word_188 word_155 word_91,0
+word_15 word_267 word_77 word_164 word_2,1
+word_136 word_271 word_272 word_270 word_19 word_7,0
+word_93 word_198 word_50 word_163 word_141 word_206 word_51 word_222 word_53 word_174 word_269,0
+word_266 word_50 word_188 word_257 word_52 word_77 word_162 word_132 word_294 word_11 word_95 word_228 word_83 word_85 word_289,0
+word_85 word_299 word_284 word_66 word_114 word_289 word_22 word_204 word_268 word_96 word_254 word_170 word_235,1
+word_272 word_197 word_256 word_33 word_1 word_17,0
+word_236 word_285 word_143 word_95 word_46 word_299 word_55 word_74 word_105,0
+word_71 word_206 word_182 word_168 word_280 word_142 word_0 word_206 word_87 word_20 word_179 word_4 word_162 word_222,0
+word_281 word_207 word_74 word_216 word_47 word_285 word_144 word_228 word_76 word_256 word_24 word_228 word_164 word_24,0
+word_115 word_191 word_268 word_84 word_135 word_53 word_95 word_75 word_258 word_95 word_161 word_157,1
+word_43 word_147 word_53 word_87 word_124 word_130 word_121 word_157 word_108 word_223 word_222,1
+word_135 word_44 word_293 word_134 word_283 word_153 word_124 word_173 word_258 word_299 word_29,1
+word_285 word_258 word_225 word_215 word_237 word_10 word_280,1
+word_258 word_21 word_235 word_70 word_5 word_121 word_224 word_237 word_195 word_268 word_228 word_162 word_257,1
+word_173 word_294 word_199 word_154 word_159 word_288,0
+word_131 word_9 word_129 word_293 word_179 word_225,1
+word_273 word_2 word_101 word_102 word_264 word_150 word_170 word_14 word_111 word_173,0
+word_55 word_59 word_34 word_32 word_103 word_160 word_127 word_126 word_253 word_39 word_27 word_292 word_28 word_298 word_216,1
+word_97 word_226 word_266 word_224 word_108 word_68 word_2 word_172,1
+word_228 word_86 word_29 word_257 word_197 word_59 word_106 word_152 word_37,0
+word_37 word_85 word_130 word_116 word_176 word_78 word_259 word_52 word_185 word_153 word_114 word_24 word_249 word_75,0
+word_67 word_11 word_67 word_35 word_71 word_242 word_221 word_127 word_275 word_109 word_289 word_251 word_160,1
+word_210 word_218 word_206 word_264 word_160 word_279 word_12 word_116 word_41,1
+word_195 word_263 word_208 word_128 word_86 word_46 word_157 word_84 word_96 word_43 word_191 word_259 word_54 word_95,0
+word_204 word_97 word_243 word_171 word_70 word_0 word_103 word_35,0
+word_170 word_209 word_97 word_186 word_298,1
+word_95 word_41 word_133 word_222 word_274 word_122 word_237 word_239 word_274 word_3 word_257 word_191 word_59 word_198,1
+word_185 word_289 word_47 word_143 word_180 word_299 word_140 word_97 word_56 word_295,0
