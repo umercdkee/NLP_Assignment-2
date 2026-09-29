@@ -1,11 +1,15 @@
 import pandas as pd
 import numpy as np
 import re
+import json
 
 #Load Data
 def load_data(train_path, test_path):
     train_df = pd.read_csv(train_path)
     test_df  = pd.read_csv(test_path)
+
+    train_df = train_df.dropna().reset_index(drop=True)
+    test_df  = test_df.dropna().reset_index(drop=True)
     
     print(f"Train samples : {len(train_df)}")
     print(f"Test  samples : {len(test_df)}")
@@ -16,8 +20,9 @@ def load_data(train_path, test_path):
 
 #Text Cleaning
 def clean_text(text):
-    text = text.lower()                        
-    text = re.sub(r'[^a-z0-9\s_]', '', text)  
+    text = text.lower()  
+    text = text.replace("'", "")                      
+    text = re.sub(r'[^a-z0-9\s_]', ' ', text)  
     text = text.strip()
     return text
 
@@ -79,7 +84,8 @@ if __name__ == "__main__":
     np.save('X_test.npy',  X_test)
     np.save('y_train.npy', y_train)
     np.save('y_test.npy',  y_test)
-    np.save('vocab.npy',   vocab)
+    with open('vocab.json', 'w') as f:
+        json.dump(vocab, f)
     
     print(f"X_train shape : {X_train.shape}")
     print(f"X_test  shape : {X_test.shape}")
