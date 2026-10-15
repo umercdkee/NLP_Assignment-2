@@ -61,24 +61,6 @@ def build_vocabulary(reviews):
 
     return vocabulary
 
-# def extract_features(reviews, vocabulary):
-#     """
-#     Extracts features using the reviews and vocabulary
-#     """
-#     feature_vectors = []
-
-#     for review in reviews:
-#         word_count = Counter(review)
-
-#         vector = []
-
-#         for word in vocabulary:
-#             vector.append(word_count[word])
-
-#         feature_vectors.append(vector)
-
-#     return feature_vectors
-
 def calculate_priors(train_pos_reviews, train_neg_reviews):
     """
     Calculate prior probabilities
@@ -94,6 +76,9 @@ def calculate_priors(train_pos_reviews, train_neg_reviews):
     return prior_positive, prior_negative
 
 def calculate_likelihoods(train_pos_tokens, train_neg_tokens, vocabulary):
+    """
+        Calculate likelihoods for each word
+    """
     # Count words in positive and negative reviews
     positive_word_count = Counter()
     for review in train_pos_tokens:
@@ -118,6 +103,11 @@ def calculate_likelihoods(train_pos_tokens, train_neg_tokens, vocabulary):
 
 def classify_review(review, vocabulary, positive_likelihoods, negative_likelihoods,
                     prior_positive, prior_negative):
+    """
+        Using the log likelihoods of each word, compute the probability of belonging to
+        a positive and negative class for each review
+    """
+    #extracting features using frequency of each word in the review (only vocabulary words are used below)
     word_count = Counter(review)
 
     #Using log here because otherwise values can get exceedingly small
@@ -137,6 +127,9 @@ def classify_review(review, vocabulary, positive_likelihoods, negative_likelihoo
         return 0
 
 def calculate_metrics (predictions, test_pos_tokens, test_neg_tokens):
+    """
+        Calculate metrics for the model
+    """
     actual_labels = ([1] * len(test_pos_tokens) + [0] * len(test_neg_tokens))
 
     # Calculate true positive rate 
@@ -157,13 +150,25 @@ def calculate_metrics (predictions, test_pos_tokens, test_neg_tokens):
     # Calculate false positives 
     false_positives = len(test_neg_tokens) - true_negatives
     
-    # Calculate accuracy, precision, recall, and F1
+    # Calculate accuracy
     accuracy = (true_positives + true_negatives) / (len(test_pos_tokens) + len(test_neg_tokens))
+
+    # Calculate precision, recall, and F1 for the positive class
     precision = true_positives / (true_positives + false_positives)
     recall = true_positives / (true_positives + false_negatives)
     f1_score = (2 * precision * recall) / (precision + recall)
 
-    return accuracy, precision, recall, f1_score, true_positives, false_negatives, false_positives, true_negatives
+    # Calculate precision, recall, and F1 for the negative class
+    negative_precision = true_negatives / (true_negatives + false_negatives)
+    negative_recall = true_negatives / (true_negatives + false_positives)
+    negative_f1_score = (2 * negative_precision * negative_recall) / (negative_precision + negative_recall)
+
+    # Macro F1 is the average of the F1 scores of both classes
+    macro_f1_score = (f1_score + negative_f1_score) / 2
+
+    return (accuracy, precision, recall, f1_score,
+            negative_precision, negative_recall, negative_f1_score, macro_f1_score,
+            true_positives, false_negatives, false_positives, true_negatives)
 
 def main():
     # Load random reviews
@@ -188,9 +193,8 @@ def main():
     #Combine train tokens
     train_tokens = train_pos_tokens + train_neg_tokens
 
-    #Build vocab and extract features
+    #Build vocab
     vocabulary = build_vocabulary(train_tokens)
-    # train_features = extract_features(train_tokens, vocabulary)
 
     prior_positive, prior_negative = calculate_priors(train_pos_reviews, train_neg_reviews)
     positive_likelihoods, negative_likelihoods = calculate_likelihoods(train_pos_tokens, train_neg_tokens, vocabulary)
@@ -204,11 +208,19 @@ def main():
                                 )
         predictions.append(prediction)
 
-    accuracy, precision, recall, f1_score, tp, fn, fp, tn = calculate_metrics (predictions, test_pos_tokens, test_neg_tokens)
+    (accuracy, precision, recall, f1_score,
+     negative_precision, negative_recall, negative_f1_score, macro_f1_score,
+     tp, fn, fp, tn) = calculate_metrics (predictions, test_pos_tokens, test_neg_tokens)
     print("Accuracy:", accuracy)
+    print("\nPositive class")
     print("Precision:", precision)
     print("Recall:", recall)
     print("F1 Score:", f1_score)
+    print("\nNegative class")
+    print("Precision:", negative_precision)
+    print("Recall:", negative_recall)
+    print("F1 Score:", negative_f1_score)
+    print("\nMacro F1 Score:", macro_f1_score)
     print("\nConfusion Matrix:")
     print("                 Predicted")
     print("              Positive  Negative")
