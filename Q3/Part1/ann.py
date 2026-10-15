@@ -1,5 +1,4 @@
 import numpy as np
-import json
 
 #Initialize
 def initialize(input_size, hidden_size, output_size):
@@ -38,9 +37,6 @@ def forward(X, W1, b1, W2, b2):
 
 #Loss Function
 def compute_loss(y, A2):
-    A2 = np.where(A2 == 0, 1e-7, A2)
-    A2 = np.where(A2 == 1, 1 - 1e-7, A2)
-
     loss = -np.mean(y * np.log(A2) + (1 - y) * np.log(1 - A2))
     return loss
 
@@ -73,21 +69,13 @@ def backward(X, y, W1, b1, W2, b2, Z1, A1, Z2, A2, learning_rate):
 def train(X_train, y_train, input_size, hidden_size=128, output_size=1, 
           learning_rate=0.1, epochs=10):
     
-    # Initialize weights
     W1, b1, W2, b2 = initialize(input_size, hidden_size, output_size)
-    
     print("Training started...\n")
     
     for epoch in range(1, epochs + 1):
-        # Forward pass
         Z1, A1, Z2, A2 = forward(X_train, W1, b1, W2, b2)
-        
-        # Compute loss
         loss = compute_loss(y_train, A2)
-        
-        # Backward pass
         W1, b1, W2, b2 = backward(X_train, y_train, W1, b1, W2, b2, Z1, A1, Z2, A2, learning_rate)
-        
         print(f"Epoch {epoch}/{epochs}  -  Loss: {loss:.4f}")
     
     print("\nTraining complete!")
