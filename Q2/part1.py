@@ -49,6 +49,9 @@ def preprocess_reviews(reviews):
     return processed_reviews    
 
 def build_vocabulary(reviews):
+    """
+    Builds vocabulary using list of reviews
+    """
     word_count = Counter()
 
     for review in reviews:
@@ -58,22 +61,28 @@ def build_vocabulary(reviews):
 
     return vocabulary
 
-def extract_features(reviews, vocabulary):
-    feature_vectors = []
+# def extract_features(reviews, vocabulary):
+#     """
+#     Extracts features using the reviews and vocabulary
+#     """
+#     feature_vectors = []
 
-    for review in reviews:
-        word_count = Counter(review)
+#     for review in reviews:
+#         word_count = Counter(review)
 
-        vector = []
+#         vector = []
 
-        for word in vocabulary:
-            vector.append(word_count[word])
+#         for word in vocabulary:
+#             vector.append(word_count[word])
 
-        feature_vectors.append(vector)
+#         feature_vectors.append(vector)
 
-    return feature_vectors
+#     return feature_vectors
 
 def calculate_priors(train_pos_reviews, train_neg_reviews):
+    """
+    Calculate prior probabilities
+    """
     num_positive = len(train_pos_reviews)
     num_negative = len(train_neg_reviews)
 
@@ -181,7 +190,7 @@ def main():
 
     #Build vocab and extract features
     vocabulary = build_vocabulary(train_tokens)
-    train_features = extract_features(train_tokens, vocabulary)
+    # train_features = extract_features(train_tokens, vocabulary)
 
     prior_positive, prior_negative = calculate_priors(train_pos_reviews, train_neg_reviews)
     positive_likelihoods, negative_likelihoods = calculate_likelihoods(train_pos_tokens, train_neg_tokens, vocabulary)
