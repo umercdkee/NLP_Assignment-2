@@ -6,3 +6,5 @@ __pycache__/
 .vscode/
 .DS_Store
 Q2/aclImdb/
+*.log
+*.txt

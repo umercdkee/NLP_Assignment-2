@@ -40,16 +40,62 @@
 
 \begin{document}
 
+\begin{abstract}
+This report covers two sentiment classification tasks. For Question 2, we implemented a Naive Bayes classifier from scratch on a subset of the IMDB movie review dataset, reaching an F1-score of 0.816, and then improved it for the competition with negation handling, TF-IDF n-gram features, chi-square feature selection and Complement Naive Bayes, reaching a macro F1-score of 0.8861. For Question 3, we implemented a feedforward Artificial Neural Network from scratch with NumPy on a synthetic dataset of anonymized tokens.
+\end{abstract}
+
+\keywords{Natural Language Processing, Naive Bayes, Laplace Smoothing, TF-IDF, Chi-Square Feature Selection, Artificial Neural Network, Sentiment Classification, Backpropagation, One-Hot Encoding, ReLU, Sigmoid, Binary Cross Entropy}
+
 \maketitle
 
-\section{Classifier Performance}
-The Naive Bayes classifier was evaluated on a random test subset of 200 reviews (100 positive, 100 negative). The model achieved an overall accuracy of 82.0\% and an \textbf{F1-score of 0.816}. 
+% ==================================================
+% Question 2
+% ==================================================
 
-The confusion matrix (Table~\ref{tab:confusion}) demonstrates that the classifier performs consistently across both classes. With a Precision of 0.833 and Recall of 0.800, the model is slightly more conservative in predicting the positive class, ensuring high confidence when it does, though missing a small fraction of actual positive reviews. Overall, the error distribution is well-balanced (20 false negatives vs. 16 false positives), indicating the model did not develop a heavy bias toward either classification despite being trained on a limited 1,000-review subset.
+\section{Question 2: Naive Bayes Classifier for Sentiment Analysis}
+
+\subsection{Part 1: Naive Bayes from Scratch}
+
+\subsubsection{Dataset Preparation}
+We used the IMDB Large Movie Review dataset~\cite{maas2011}. With a fixed random seed (42), we randomly selected 500 positive and 500 negative reviews from the training set, and 100 positive and 100 negative reviews from the test set. Each review was converted to lowercase, punctuation was removed, and English stop words (NLTK list) were filtered out. The cleaned text was then tokenized into words with NLTK's \texttt{word\_tokenize}. The vocabulary was built from the unique words of the 1,000 training reviews only, and each review is represented by the frequency of each vocabulary word it contains.
+
+\subsubsection{Model}
+The classifier was implemented without any machine learning library. The prior of each class $c$ is the fraction of training reviews in that class:
+\begin{align}
+P(c) &= \frac{N_c}{N}
+\end{align}
+The likelihood of each vocabulary word $w$ given a class uses Laplace (add-one) smoothing, where $\text{count}(w, c)$ is the number of times $w$ appears in training reviews of class $c$ and $|V|$ is the vocabulary size:
+\begin{align}
+P(w \mid c) &= \frac{\text{count}(w, c) + 1}{\sum_{w' \in V} \text{count}(w', c) + |V|}
+\end{align}
+A test review $d$ is assigned the class with the highest posterior probability, computed in log space. Words not in the vocabulary are skipped:
+\begin{align}
+\hat{c} &= \arg\max_{c} \Big[ \log P(c) + \sum_{w \in d} \text{count}(w, d) \cdot \log P(w \mid c) \Big]
+\end{align}
+
+\subsubsection{Results}
+The classifier was evaluated on the 200 test reviews. It achieved an accuracy of 82.0\% and an \textbf{F1-score of 0.816} for the positive class (Table~\ref{tab:q2p1-metrics}).
 
 \begin{table}[H]
-\caption{Confusion Matrix}
-\label{tab:confusion}
+\caption{Q2 Part 1: Evaluation Results on Test Set}
+\label{tab:q2p1-metrics}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Metric} & \textbf{Value} \\ \midrule
+Accuracy & 82.00\% \\
+Precision (Positive) & 0.8333 \\
+Recall (Positive) & 0.8000 \\
+F1 Score (Positive) & 0.8163 \\
+Precision (Negative) & 0.8077 \\
+Recall (Negative) & 0.8400 \\
+F1 Score (Negative) & 0.8235 \\
+Macro F1 & 0.8199 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{Q2 Part 1: Confusion Matrix}
+\label{tab:q2p1-confusion}
 \begin{tabular}{@{}lcc@{}}
 \toprule
  & \textbf{Predicted Positive} & \textbf{Predicted Negative} \\ \midrule
@@ -58,22 +104,226 @@ The confusion matrix (Table~\ref{tab:confusion}) demonstrates that the classifie
 \end{tabular}
 \end{table}
 
-\section{Implementation Challenges}
-During the implementation and testing of the classifier, several standard Natural Language Processing challenges were encountered and addressed within the code:
+The confusion matrix (Table~\ref{tab:q2p1-confusion}) shows that the classifier performs consistently across both classes. With a precision of 0.833 and recall of 0.800 for the positive class, the model is slightly more conservative in predicting positive reviews: it is usually right when it does, but misses a small fraction of actual positive reviews. The errors are well balanced (20 false negatives against 16 false positives), so the model did not develop a strong bias toward either class despite being trained on only 1,000 reviews.
 
+\subsubsection{Implementation Challenges}
 \begin{itemize}
-    \item \textbf{Floating-Point Underflow:} Multiplying many small probabilities for large text documents causes numerical underflow, yielding a final probability of zero. This was successfully mitigated by operating in the log space, utilizing \texttt{math.log()} and summing the log-probabilities of tokens instead of multiplying raw probabilities.
-    \item \textbf{Zero-Frequency Problem:} Words present in the test set that were unseen during training would result in a zero probability, completely nullifying the entire document's score. This was handled using Laplace smoothing (adding 1 to word counts) when calculating the positive and negative likelihoods.
+    \item \textbf{Floating-Point Underflow:} Multiplying many small probabilities for long reviews causes numerical underflow, producing a probability of zero. We avoided this by working in log space with \texttt{math.log()}, summing the log-probabilities of tokens instead of multiplying raw probabilities.
+    \item \textbf{Zero-Frequency Problem:} A word that never appears in one class during training would get a zero likelihood and cancel the entire review's score for that class. This was handled with Laplace smoothing (adding 1 to every word count).
 \end{itemize}
 
-\section{Ideas for Improvement}
-While the baseline unigram Bag-of-Words model performs well, the following modifications could significantly improve its predictive accuracy:
-
+\subsubsection{Ideas for Improvement}
 \begin{itemize}
-    \item \textbf{Implementing N-grams:} Transitioning from unigrams to bigrams or trigrams would allow the model to capture local context and crucial semantic modifiers, specifically negations (e.g., distinguishing ``good'' from ``not good'').
-    \item \textbf{Advanced Preprocessing:} Incorporating lemmatization or stemming would group morphological variants of words together (e.g., ``running'', ``runs'', and ``ran'' to the root ``run''), thereby condensing the vocabulary space and reinforcing feature weights.
-    \item \textbf{TF-IDF Weighting:} Replacing raw frequency counts with Term Frequency-Inverse Document Frequency (TF-IDF) would penalize highly common terms that survived basic stop-word removal, allowing the model to focus strictly on discriminative, class-defining vocabulary.
-    \item \textbf{Full Dataset Utilization:} The current model was trained on a randomly sampled subset of 1,000 reviews. Training on the full \texttt{aclImdb} dataset (25,000 training reviews) would dramatically improve the classifier's vocabulary coverage and generalizability.
+    \item \textbf{N-grams:} Bigrams or trigrams would let the model capture local context and modifiers, especially negations (distinguishing ``good'' from ``not good'').
+    \item \textbf{Better Preprocessing:} Stemming or lemmatization would group variants of a word (``running'', ``runs'', ``ran'' to ``run''), shrinking the vocabulary and strengthening word statistics. Removing HTML tags such as \texttt{<br />} would also clean the reviews.
+    \item \textbf{TF-IDF Weighting:} Replacing raw counts with TF-IDF would down-weight very common words and let the model focus on discriminative vocabulary.
+    \item \textbf{More Training Data:} The model was trained on 1,000 of the 25,000 available training reviews. Using more data would improve vocabulary coverage and generalization.
 \end{itemize}
+
+\subsection{Part 2: Naive Bayes Performance Competition}
+
+\subsubsection{Approach}
+Our competition model follows the pipeline of Hamzah~\cite{hamzah2021}, who classified IMDB reviews by combining TF-IDF features, chi-square feature selection and Multinomial Naive Bayes, and showed that chi-square selection raised accuracy from 81.39\% to 85.37\%. We kept this TF-IDF and chi-square pipeline, used Complement Naive Bayes in place of Multinomial Naive Bayes, and did not use the AdaBoost step. Part 2 uses scikit-learn, while the Part 1 code is unchanged. Compared to the Part 1 baseline, we changed the following:
+\begin{itemize}
+    \item \textbf{Training data:} all 25,000 training reviews (12,500 per class) instead of 1,000.
+    \item \textbf{Text cleaning:} HTML tags are removed, text is lowercased and punctuation is removed. Stop words are no longer removed.
+    \item \textbf{Negation handling:} after a negation word (e.g.\ ``not'', ``no'', ``never'' or a word ending in ``n't''), every following word is prefixed with \texttt{NOT\_} until the next punctuation mark, so ``not good'' produces the feature \texttt{NOT\_good}.
+    \item \textbf{Features:} TF-IDF over unigrams, bigrams and trigrams with sublinear term frequency, ignoring n-grams that appear in fewer than 3 reviews or in more than 95\% of reviews. This gives 488,632 features.
+    \item \textbf{Feature selection:} the top $k$ features by chi-square score~\cite{hamzah2021}.
+    \item \textbf{Classifier:} Complement Naive Bayes with smoothing parameter $\alpha$.
+\end{itemize}
+
+\subsubsection{Tuning}
+The number of selected features $k \in \{40000, 60000, 80000, 100000\}$ and the smoothing parameter $\alpha \in \{0.05, 0.1, 0.2, 0.3, 0.5\}$ were tuned with 5-fold cross-validation on the training set, using macro F1 as the score. The test set was not used for tuning. The best configuration was $k = 40000$ and $\alpha = 0.5$, with a cross-validation macro F1 of 0.8710.
+
+\subsubsection{Results}
+The final model was trained on all 25,000 training reviews and evaluated on all 25,000 test reviews (Tables~\ref{tab:q2p2-metrics} and~\ref{tab:q2p2-confusion}). It reached a \textbf{macro F1-score of 0.8861}, compared to 0.8199 for the Part 1 baseline. The result can be reproduced by running \texttt{Q2/part2.py} with the \texttt{aclImdb} folder placed inside \texttt{Q2}.
+
+\begin{table}[H]
+\caption{Q2 Part 2: Evaluation Results on Test Set}
+\label{tab:q2p2-metrics}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Metric} & \textbf{Value} \\ \midrule
+Accuracy & 88.61\% \\
+Precision (Positive) & 0.8906 \\
+Recall (Positive) & 0.8802 \\
+F1 Score (Positive) & 0.8854 \\
+Precision (Negative) & 0.8816 \\
+Recall (Negative) & 0.8919 \\
+F1 Score (Negative) & 0.8867 \\
+Macro Precision & 0.8861 \\
+Macro Recall & 0.8861 \\
+Macro F1 & 0.8861 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{Q2 Part 2: Confusion Matrix}
+\label{tab:q2p2-confusion}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+ & \textbf{Predicted Positive} & \textbf{Predicted Negative} \\ \midrule
+\textbf{Actual Positive} & 11003 & 1497 \\
+\textbf{Actual Negative} & 1351 & 11149 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+Compared to Part 1, the errors stay balanced between the classes (1,497 false negatives against 1,351 false positives) while the error rate drops from 18.0\% to 11.4\%. In cross-validation, the smallest feature set ($k = 40000$) scored best for every value of $\alpha$, and keeping more features generally lowered the score. This agrees with Hamzah~\cite{hamzah2021}, where a small chi-square selection (2,000 features) gave the best accuracy: many of the 488,632 n-grams add noise rather than sentiment information. A wider search toward smaller $k$ and larger $\alpha$, where the best values lay at the edge of our grid, may improve the result further.
+
+% ==================================================
+% Question 3
+% ==================================================
+
+\section{Question 3: Artificial Neural Network for Sentiment Classification}
+
+\subsection{Approach}
+
+\subsubsection{Dataset Preparation}
+We loaded the synthetic dataset which contains 5000 training and 500 test samples. Each sample has a sentence made up of anonymized tokens like \texttt{word\_1}, \texttt{word\_2} and a binary label (0 or 1). We cleaned the text by converting to lowercase and removing punctuation, then tokenized each sentence by splitting on spaces. A vocabulary of 300 unique words was built from the training set only. Each sentence was then converted into a one-hot encoded vector of size 300.
+
+\subsubsection{Network Architecture}
+We implemented a simple feedforward ANN with one hidden layer from scratch using only NumPy:
+\begin{itemize}
+    \item Input layer: 300 neurons (vocabulary size)
+    \item Hidden layer: 128 neurons with ReLU activation
+    \item Output layer: 1 neuron with Sigmoid activation
+\end{itemize}
+
+\subsubsection{Forward Propagation}
+The forward pass computes:
+\begin{align}
+Z_1 &= X \cdot W_1 + b_1 \\
+A_1 &= \text{ReLU}(Z_1) \\
+Z_2 &= A_1 \cdot W_2 + b_2 \\
+A_2 &= \text{Sigmoid}(Z_2)
+\end{align}
+
+\subsubsection{Loss Function}
+We used Binary Cross Entropy loss:
+\begin{equation}
+L = -\frac{1}{n} \sum \left[ y \cdot \log(A_2) + (1 - y) \cdot \log(1 - A_2) \right]
+\end{equation}
+
+\subsubsection{Backpropagation}
+We computed gradients layer by layer using the chain rule.
+
+\paragraph{Output Layer Gradients}
+Starting from the loss, we differentiate with respect to $A_2$:
+\begin{equation}
+\frac{\partial L}{\partial A_2} = -\frac{y}{A_2} + \frac{1 - y}{1 - A_2}
+\end{equation}
+The derivative of Sigmoid is:
+\begin{equation}
+\frac{\partial A_2}{\partial Z_2} = A_2(1 - A_2)
+\end{equation}
+Applying the chain rule:
+\begin{equation}
+\delta Z_2 = \frac{\partial L}{\partial A_2} \cdot \frac{\partial A_2}{\partial Z_2} = \left( -\frac{y}{A_2} + \frac{1 - y}{1 - A_2} \right) \cdot A_2(1 - A_2) = A_2 - y
+\end{equation}
+Since $Z_2 = A_1 \cdot W_2 + b_2$:
+\begin{align}
+\delta W_2 &= \frac{1}{n} A_1^T \cdot \delta Z_2 \\
+\delta b_2 &= \frac{1}{n} \sum \delta Z_2
+\end{align}
+
+\paragraph{Hidden Layer Gradients}
+Propagating the error back through $W_2$:
+\begin{equation}
+\delta A_1 = \delta Z_2 \cdot W_2^T
+\end{equation}
+The derivative of ReLU is:
+\begin{equation}
+\text{ReLU}'(Z_1) =
+\begin{cases}
+1 & \text{if } Z_1 > 0 \\
+0 & \text{if } Z_1 \leq 0
+\end{cases}
+\end{equation}
+Applying the chain rule:
+\begin{equation}
+\delta Z_1 = \delta A_1 \times \text{ReLU}'(Z_1)
+\end{equation}
+Since $Z_1 = X \cdot W_1 + b_1$:
+\begin{align}
+\delta W_1 &= \frac{1}{n} X^T \cdot \delta Z_1 \\
+\delta b_1 &= \frac{1}{n} \sum \delta Z_1
+\end{align}
+
+\paragraph{Weight Updates}
+Weights were updated using gradient descent:
+\begin{align}
+W &= W - \alpha \cdot \delta W \\
+b &= b - \alpha \cdot \delta b
+\end{align}
+where $\alpha = 0.1$ is the learning rate.
+
+\subsection{Results}
+
+\begin{table}[H]
+\caption{Evaluation Results on Test Set}
+\label{tab:results}
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Metric} & \textbf{Value} \\ \midrule
+Accuracy & 52.60\% \\
+Precision (Positive) & 0.5149 \\
+Recall (Positive) & 0.9641 \\
+F1 Score (Positive) & 0.6713 \\
+Precision (Negative) & 0.7000 \\
+Recall (Negative) & 0.0843 \\
+F1 Score (Negative) & 0.1505 \\
+Macro F1 & 0.4109 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption{Confusion Matrix}
+\label{tab:confusion}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+ & \textbf{Predicted 0} & \textbf{Predicted 1} \\ \midrule
+\textbf{Actual 0} & 21 & 228 \\
+\textbf{Actual 1} & 9 & 242 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Confusion Matrix}
+The model predicts almost everything as class 1, as shown by the high recall for the positive class (0.9641) and near-zero recall for the negative class (0.0843). This imbalance is reflected in the large off-diagonal entry of 228 false positives against only 21 true negatives.
+
+\subsection{Challenges}
+The main challenge was the nature of the dataset. All 300 words of the vocabulary appear in both positive and negative sentences. This means there is no meaningful signal for the model to learn from, the words do not distinguish between the two classes. Secondaly, one-hot encoding produces sparse vectors where around 97\% of values are zeros, and the model ends up predicting randomly. The loss stayed at 0.6931 throughout training.
+
+\subsection{Potential Improvements}
+\begin{itemize}
+    \item Using TF-IDF instead of one-hot encoding to give words different weights based on their discriminative power
+    \item Adding more hidden layers to increase model capacity
+    \item Using a real labeled sentiment dataset instead of synthetic anonymized tokens, where word choice actually correlates with the label.
+\end{itemize}
+
+\subsection{Conclusion of Question 3}
+This part implemented a feedforward ANN from scratch using NumPy for binary sentiment classification. The network was trained correctly and the backpropagation derivations were verified, but the model could not learn because the synthetic dataset provides no discriminative signal: all vocabulary words appear with similar frequencies in both classes. The result is a model that collapses to predicting the majority class, achieving 52.60\% accuracy with a loss fixed at 0.6931 throughout training.
+
+% ==================================================
+% Overall Conclusion
+% ==================================================
+
+\section{Overall Conclusion}
+Both questions show that the representation of the text matters as much as the classifier. On real IMDB reviews, a from-scratch Naive Bayes classifier already reached an F1-score of 0.816, and better preprocessing, negation handling, TF-IDF n-gram features and chi-square feature selection raised the macro F1-score to 0.8861 while keeping a Naive Bayes model. On the synthetic dataset of Question 3, where every word appears in both classes, even a correctly implemented neural network could not learn, because the input features carried no information about the label.
+
+\begin{thebibliography}{2}
+
+\bibitem{hamzah2021}
+Muhamad Biki Hamzah. 2021.
+\newblock Classification of Movie Review Sentiment Analysis Using Chi-Square and Multinomial Na\"{i}ve Bayes with Adaptive Boosting.
+\newblock \emph{Journal of Advances in Information Systems and Technology} 3, 1 (April 2021), 67--74.
+\newblock \url{https://journal.unnes.ac.id/sju/jaist/article/view/49098/19796}
+
+\bibitem{maas2011}
+Andrew L. Maas, Raymond E. Daly, Peter T. Pham, Dan Huang, Andrew Y. Ng, and Christopher Potts. 2011.
+\newblock Learning Word Vectors for Sentiment Analysis.
+\newblock In \emph{Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies}. 142--150.
+
+\end{thebibliography}
 
 \end{document}
