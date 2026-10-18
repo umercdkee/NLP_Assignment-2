@@ -70,13 +70,6 @@ where $N = 60$ is the total number of training tokens, $|V| = 30$ is the vocabul
 \subsubsection{Why We Chose Add-k Instead of Add-One}
 Although Add-One ($k = 1.0$) avoids zero probabilities, it adds a $+1$ count for every word in the vocabulary. Since our training set is very small (only 60 tokens), most bigrams and trigrams occur only 1 or 2 times in training. Adding 30 to the denominator takes away too much probability mass from real phrases seen in training and gives it to unseen words. By using Add-$k$ with $k = 0.1$, we add only $0.1 \times 30 = 3$ to the denominator. This still gives a non-zero probability to the 7 unseen test words while keeping much better probability estimates for the phrases that actually appear in \texttt{train.txt}.
 
-\subsubsection{Perplexity Calculation}
-Perplexity measures how well the model predicts the test set; a lower perplexity means better performance and less uncertainty. To avoid floating point underflow when multiplying small probabilities, we computed perplexity in log over all $M$ test $n$-grams ($g_1, g_2, \dots, g_M$):
-\begin{align}
-\text{Perplexity} &= \exp\left( -\frac{1}{M} \sum_{i=1}^{M} \ln P(g_i) \right)
-\end{align}
-where $M = 31$ for unigrams, $M = 30$ for bigrams, and $M = 29$ for trigrams.
-
 \subsection{Results}
 We evaluated the model on \texttt{test.txt} for $n = 1$ (Unigram), $n = 2$ (Bigram), and $n = 3$ (Trigram) using both our main Add-$k$ ($k = 0.1$) smoothing and the baseline Add-One ($k = 1.0$) smoothing (Table~\ref{tab:q1-perplexity}).
 
