@@ -95,7 +95,7 @@ Trigram ($n = 3$) & 23.0527 & 26.8136 \\ \bottomrule
 
 \subsection{Discussion: Impact of n on Performance and Perplexity}
 \begin{itemize}
-    \item \textbf{Unigram ($n = 1$):} The unigram model performs the worst because it ignores word order and context completely, predicting each word only from its frequency in training. With Add-One ($k = 1.0$), its perplexity is 30.4586 and with Add-$k$ ($k = 0.1$) perplexity is 44.8265. With Add-$k$ its higher because the 7 unseen test words get a much smaller probability ($\frac{0.1}{60 + 3} \approx 0.0016$ compared to $\frac{1}{60 + 30} \approx 0.0111$), and there is no context to boost known phrases.
+    \item \textbf{Unigram ($n = 1$):} The unigram model performs the worst because it ignores word order and context completely, predicting each word only from its frequency in training. With Add-One ($k = 1.0$), its perplexity is 30.4586 and with Add-$k$ ($k = 0.1$) perplexity is 44.8265. With Add-$k$ perplexity is higher because the 7 unseen test words get a much smaller probability ($\frac{0.1}{60 + 3} \approx 0.0016$ compared to $\frac{1}{60 + 30} \approx 0.0111$), and there is no context to boost known phrases.
     \item \textbf{Bigram ($n = 2$):} The bigram model gives the \textbf{best performance} using both methods, achieving a perplexity of 16.8981 with Add-$k$ ($k = 0.1$) and 22.4829 with Add-One ($k = 1.0$). Conditioning on one previous word captures common two-word phrases shared between the training and test sets (such as ``the fox'', ``the dog'', ``the quick'', ``the lazy'', ``lazy dog'', ``dogs are'' and ``are loyal'') without suffering from severe data sparsity.
     \item \textbf{Trigram ($n = 3$):} When $n$ is increased to 3, perplexity rises back up to 23.0527 with Add-$k$ ($k = 0.1$) and 26.8136 with Add-One ($k = 1.0$). Even though a trigram uses two previous words as context, our 60 word training set is too small to contain enough three word combinations. Very few trigrams from training repeat in the test set (mainly ``the lazy dog'' and ``a lazy dog'') so most test trigrams have a count of zero. This shows the key trade off of N-gram models is larger $n$ captures more context but on a small dataset it suffers from data sparsity.
 \end{itemize}
@@ -343,7 +343,7 @@ Macro F1 & 0.4109 \\ \bottomrule
 The model predicts almost everything as class 1, as shown by the high recall for the positive class (0.9641) and near-zero recall for the negative class (0.0843). This imbalance is reflected in the large off-diagonal entry of 228 false positives against only 21 true negatives.
 
 \subsection{Challenges}
-The main challenge was the nature of the dataset. All 300 words of the vocabulary appear in both positive and negative sentences. This means there is no meaningful signal for the model to learn from, the words do not distinguish between the two classes. Secondaly, one-hot encoding produces sparse vectors where around 97\% of values are zeros, and the model ends up predicting randomly. The loss stayed at 0.6931 throughout training.
+The main challenge was the nature of the dataset. All 300 words of the vocabulary appear in both positive and negative sentences. This means there is no meaningful signal for the model to learn from, the words do not distinguish between the two classes. Secondly, one-hot encoding produces sparse vectors where around 97\% of values are zeros, and the model ends up predicting randomly. The loss stayed at 0.6931 throughout training.
 
 \subsection{Potential Improvements}
 \begin{itemize}
@@ -360,8 +360,7 @@ This part implemented a feedforward ANN from scratch using NumPy for binary sent
 % ==================================================
 
 \section{Overall Conclusion}
-Both questions show that the representation of the text matters as much as the classifier. On real IMDB reviews, a from-scratch Naive Bayes classifier already reached an F1-score of 0.816, and better preprocessing, negation handling, TF-IDF n-gram features and chi-square feature selection raised the macro F1-score to 0.8861 while keeping a Naive Bayes model. On the synthetic dataset of Question 3, where every word appears in both classes, even a correctly implemented neural network could not learn, because the input features carried no information about the label.
-
+Across all three questions, we see that text representation, context length and data quality matter as much as the model itself. In Question 1, the bigram model with Add-$k$ ($k = 0.1$) smoothing achieved the lowest perplexity (16.8981) by capturing local two word context without suffering from the severe data sparsity of trigrams or the heavy penalty of Add One smoothing. On real IMDB reviews in Question 2, a from-scratch Naive Bayes classifier reached an F1-score of 0.816, and better preprocessing, negation handling, TF-IDF n-gram features and chi-square feature selection raised the macro F1-score to 0.8861 while keeping a Naive Bayes model. Finally, on the synthetic dataset of Question 3, where every word appears in both classes, even a correctly implemented neural network could not learn because the input features carried no information about the label.
 \begin{thebibliography}{2}
 
 \bibitem{hamzah2021}
