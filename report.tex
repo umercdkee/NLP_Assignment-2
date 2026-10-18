@@ -41,13 +41,64 @@
 \begin{document}
 
 \begin{abstract}
-This report covers two sentiment classification tasks. For Question 2, we implemented a Naive Bayes classifier from scratch on a subset of the IMDB movie review dataset, reaching an F1-score of 0.816, and then improved it for the competition with negation handling, TF-IDF n-gram features, chi-square feature selection and Complement Naive Bayes, reaching a macro F1-score of 0.8861. For Question 3, we implemented a feedforward Artificial Neural Network from scratch with NumPy on a synthetic dataset of anonymized tokens.
+This report covers language modeling and sentiment classification tasks. For Question 1, we implemented an N-Gram language model from scratch for unigram, bigram and trigram models using Add-$k$ ($k = 0.1$) achieving the lowest perplexity of 16.8981 with the bigram model. For Question 2, we implemented a Naive Bayes classifier from scratch on a subset of the IMDB movie review dataset, reaching an F1-score of 0.816, and then improved it for the competition with negation handling, TF-IDF n-gram features, chi-square feature selection and Complement Naive Bayes, reaching a macro F1-score of 0.8861. For Question 3, we implemented a feedforward Artificial Neural Network from scratch with NumPy on a synthetic dataset of anonymized tokens.
 \end{abstract}
 
-\keywords{Natural Language Processing, Naive Bayes, Laplace Smoothing, TF-IDF, Chi-Square Feature Selection, Artificial Neural Network, Sentiment Classification, Backpropagation, One-Hot Encoding, ReLU, Sigmoid, Binary Cross Entropy}
+\keywords{Natural Language Processing, N-Gram Language Model, Perplexity, Add-k Smoothing, Naive Bayes, Laplace Smoothing, TF-IDF, Chi-Square Feature Selection, Artificial Neural Network, Sentiment Classification, Backpropagation, One-Hot Encoding, ReLU, Sigmoid, Binary Cross Entropy}
+% ==================================================
+% Question 2
+% ==================================================
 
 \maketitle
+\section{Question 1: Implementing an N-Gram Language Model and Testing Perplexity}
 
+\subsection{Approach}
+
+\subsubsection{Dataset Preparation}
+We loaded the training corpus (\texttt{train.txt}) and test corpus (\texttt{test.txt}). Both files were preprocessed by converting all text to lowercase, removing special characters and punctuation using regular expressions, and tokenizing the text into individual words by splitting on spaces. The training set has $N = 60$ total tokens and forms a vocabulary of $|V| = 30$ unique words. The test set has 31 tokens, out of which 7 words are OOV; \texttt{friends}, \texttt{plays}, \texttt{with}, \texttt{be}, \texttt{tricky}, \texttt{to}, \texttt{train}.
+
+\subsubsection{N-Gram Model and Smoothing}
+We implemented the N-gram language model using Python's \texttt{Counter} to count the frequencies of $n$-grams and $(n-1)$-gram contexts from the training data. Without smoothing, any unseen word or unseen n-gram in the test set gets a probability of zero which causes the perplexity to become undefined.
+
+To handle unseen words, we tested both standard Add-One (Laplace) smoothing ($k = 1.0$) and Add-$k$ smoothing ($k = 0.1$). Based on the results we chose Add-$k$ ($k = 0.1$) as our main method. Add-$k$ smoothing computes the probability of a word $w_n$ given the previous $n-1$ words using:
+\begin{align}
+P(w_1) &= \frac{\text{count}(w_1) + k}{N + k \cdot |V|} \quad \text{(Unigram, } n = 1\text{)} \\
+P(w_n \mid w_1^{n-1}) &= \frac{\text{count}(w_1^{n}) + k}{\text{count}(w_1^{n-1}) + k \cdot |V|} \quad \text{(for } n > 1\text{)}
+\end{align}
+where $N = 60$ is the total number of training tokens, $|V| = 30$ is the vocabulary size and $k = 0.1$.
+
+\subsubsection{Why We Chose Add-k Instead of Add-One}
+Although Add-One ($k = 1.0$) avoids zero probabilities, it adds a $+1$ count for every word in the vocabulary. Since our training set is very small (only 60 tokens), most bigrams and trigrams occur only 1 or 2 times in training. Adding 30 to the denominator takes away too much probability mass from real phrases seen in training and gives it to unseen words. By using Add-$k$ with $k = 0.1$, we add only $0.1 \times 30 = 3$ to the denominator. This still gives a non-zero probability to the 7 unseen test words while keeping much better probability estimates for the phrases that actually appear in \texttt{train.txt}.
+
+\subsubsection{Perplexity Calculation}
+Perplexity measures how well the model predicts the test set; a lower perplexity means better performance and less uncertainty. To avoid floating point underflow when multiplying small probabilities, we computed perplexity in log over all $M$ test $n$-grams ($g_1, g_2, \dots, g_M$):
+\begin{align}
+\text{Perplexity} &= \exp\left( -\frac{1}{M} \sum_{i=1}^{M} \ln P(g_i) \right)
+\end{align}
+where $M = 31$ for unigrams, $M = 30$ for bigrams, and $M = 29$ for trigrams.
+
+\subsection{Results}
+We evaluated the model on \texttt{test.txt} for $n = 1$ (Unigram), $n = 2$ (Bigram), and $n = 3$ (Trigram) using both our main Add-$k$ ($k = 0.1$) smoothing and the baseline Add-One ($k = 1.0$) smoothing (Table~\ref{tab:q1-perplexity}).
+
+\begin{table}[H]
+\centering
+\caption{Q1: Perplexity Results on Test Set}
+\label{tab:q1-perplexity}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Model} & \textbf{Add-$k$ ($0.1$)} & \textbf{Add-One ($1.0$)} \\ \midrule
+Unigram ($n = 1$) & 44.8265 & 30.4586 \\
+Bigram ($n = 2$)  & \textbf{16.8981} & \textbf{22.4829} \\
+Trigram ($n = 3$) & 23.0527 & 26.8136 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Discussion: Impact of n on Performance and Perplexity}
+\begin{itemize}
+    \item \textbf{Unigram ($n = 1$):} The unigram model performs the worst because it ignores word order and context completely, predicting each word only from its frequency in training. With Add-One ($k = 1.0$), its perplexity is 30.4586 and with Add-$k$ ($k = 0.1$) perplexity is 44.8265. With Add-$k$ its higher because the 7 unseen test words get a much smaller probability ($\frac{0.1}{60 + 3} \approx 0.0016$ compared to $\frac{1}{60 + 30} \approx 0.0111$), and there is no context to boost known phrases.
+    \item \textbf{Bigram ($n = 2$):} The bigram model gives the \textbf{best performance} using both methods, achieving a perplexity of 16.8981 with Add-$k$ ($k = 0.1$) and 22.4829 with Add-One ($k = 1.0$). Conditioning on one previous word captures common two-word phrases shared between the training and test sets (such as ``the fox'', ``the dog'', ``the quick'', ``the lazy'', ``lazy dog'', ``dogs are'' and ``are loyal'') without suffering from severe data sparsity.
+    \item \textbf{Trigram ($n = 3$):} When $n$ is increased to 3, perplexity rises back up to 23.0527 with Add-$k$ ($k = 0.1$) and 26.8136 with Add-One ($k = 1.0$). Even though a trigram uses two previous words as context, our 60 word training set is too small to contain enough three word combinations. Very few trigrams from training repeat in the test set (mainly ``the lazy dog'' and ``a lazy dog'') so most test trigrams have a count of zero. This shows the key trade off of N-gram models is larger $n$ captures more context but on a small dataset it suffers from data sparsity.
+\end{itemize}
 % ==================================================
 % Question 2
 % ==================================================
